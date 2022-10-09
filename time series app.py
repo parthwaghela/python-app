@@ -16,9 +16,14 @@ from keras.layers import Dense, LSTM, RepeatVector, TimeDistributed, Flatten, Dr
 from keras.models import load_model
 
 
-loaded_model = load_model('C:/Users/nakul/OneDrive/Desktop/Parth/Final Submission/deployment/model_lstm.h5')
+loaded_model = load_model('model_lstm.h5')
 
-load_data = pd.read_csv('C:/Users/nakul/OneDrive/Desktop/Parth/Final Submission/deployment/loading_dataset.csv',index_col=False)
+@st.cache
+def load_data():
+    load_data = pd.read_csv('loading_dataset.csv',index_col=False)
+    return load_data
+
+load_data = load_data()
 
 #create function
 def time_series(shop_id,item_id):
