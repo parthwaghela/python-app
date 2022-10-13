@@ -51,7 +51,7 @@ def time_series(shop_id,item_id):
     #pred_value = prediction[[0]]
     return (np.round(prediction))
 
-time_series(38, 5233)
+#time_series(38, 5233)
 
 def main():
     
@@ -59,8 +59,8 @@ def main():
     st.title("Future sales Time series forecasting")
     
     # getting input data from user
-    shop_id = st.text_input("shop id")
-    item_id = st.text_input("item id")
+    shop_id = st.text_input("SHOP ID")
+    item_id = st.text_input("ITEM ID")
     
     #code for prediction
     prediction_value = ''
