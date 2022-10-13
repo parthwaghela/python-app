@@ -66,7 +66,7 @@ def main():
     prediction_value = ''
     
     #creating a button
-    if st.button("item_count_predicton_monthly"):
+    if st.button("Predict count of item sold for next month"):
         prediction_value = time_series(shop_id,item_id)
     
     st.success(prediction_value)
